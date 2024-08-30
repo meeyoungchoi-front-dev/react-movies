@@ -35,6 +35,8 @@ const AppLayout = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+       {/* Outlet을 Navbar 아래에 추가 */}
+       <Outlet />
     </div>
     
   )
