@@ -6,17 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+// ReactDOM.createRoot를 사용하여 root element 가져오기
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const queryClient = new QueryClient();
+
+// root.render 메서드를 사용하여 React 애플리케이션 렌더링
 root.render(
   <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-         <App />
-      </BrowserRouter>
-  </QueryClientProvider> 
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </QueryClientProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// 성능 측정을 위한 reportWebVitals 호출
 reportWebVitals();
