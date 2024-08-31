@@ -3,11 +3,12 @@ import { usePopuplarMoviesQuery } from '../../../../hooks/usePopuplarMovies'
 import { Alert } from 'bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import "./PopuplarMovieSlide.style.css";
 
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 8
+        items: 6
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -40,10 +41,7 @@ const PopuplarMovieSlide = () => {
             itemClass="movie-slider p-1"
             containerClass="carousel-container"
             >
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-            <div>Item 4</div>
+            {data.results.map((movie, index) => <MovieCard movie={movie} key={index}/>)}
         </Carousel>;
     </div>
   )
