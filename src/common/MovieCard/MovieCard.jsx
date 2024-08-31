@@ -1,8 +1,15 @@
 import React from 'react'
 import Badge from 'react-bootstrap/Badge';
 import './MovieCard.style.css'
+import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
 const MovieCard = ({movie}) => {
+  const {data: genreData} = useMovieGenreQuery();
+
+
+
+
+
   return (
     <div 
     style={{backgroundImga:"url(" + `https://media.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}` + ")" }} className="movie-card">
